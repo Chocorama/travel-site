@@ -1,9 +1,10 @@
 import '../styles/styles.css';
+import 'lazysizes';
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
 
-
+//after loading in lazysizes go to html and add a class of lazyload and then look at srcset. when browsers see this they try to d/l them immediately but if we change to data-srcset ... webbrowsers arent programmed to download that immediately
 
 new StickyHeader()
 new RevealOnScroll(document.querySelectorAll('.feature-item'), 75)
@@ -39,4 +40,4 @@ if(module.hot) {
 // /* webpackChunkName: "modal" */ is a way for webpack to change name from random number naming if you go to Network tab in dev tools
 
 //when to save a new instance of a class to a variable??????
-//if you're going to need to access it or call its methods later on. in this case evrytime someone is clicking on a button with .open-modal class - we are running the objects openTheModal method,  so here we would absolutely want to save this instance of a class to a variable. stickyheader on the other hand does not need to live in a variable and same for mobileMenu
+//if you're going to need to access it or call its methods later on. in this case evrytime someone is clicking on a button with .open-modal class - we are running the objects openTheModal method,  so here we would absolutely want to save this instance of a class to a variable. stickyheader on the other hand does not need to live in a variable and same for mobileMenu. so lets get rif of those. however we would want to get into the habit of storing them into variables if our different modules would need to interact with eachother
