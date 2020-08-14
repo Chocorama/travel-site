@@ -6,6 +6,7 @@ import StickyHeader from './modules/StickyHeader';
 
 //after loading in lazysizes go to html and add a class of lazyload and then look at srcset. when browsers see this they try to d/l them immediately but if we change to data-srcset ... webbrowsers arent programmed to download that immediately
 
+
 new StickyHeader()
 new RevealOnScroll(document.querySelectorAll('.feature-item'), 75)
 new RevealOnScroll(document.querySelectorAll('.testimonial'), 60)
